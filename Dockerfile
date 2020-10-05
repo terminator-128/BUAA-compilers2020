@@ -2,5 +2,5 @@
 FROM gcc:10
 WORKDIR /app/
 COPY ./* ./
-RUN gcc my-program.cpp -lstdc++ -o program
+RUN gcc cxylex.cpp -lstdc++ -o program
 RUN chmod +x program
