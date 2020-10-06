@@ -177,7 +177,10 @@ int getsysm()
 	// 清空标识符
 	clearToken();
 	
-	do{getChar();}
+	do{
+		if(!getChar())
+			break;
+	}
 	while(isSpace()||isNewline()||isTab());
 
 	// cout << current;
