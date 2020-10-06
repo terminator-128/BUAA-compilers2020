@@ -172,8 +172,6 @@ bool isEqu()
 	return current=='='? true : false;
 }
 
-
-
 int getsysm()
 {
 	// 清空标识符
@@ -188,7 +186,8 @@ int getsysm()
 	{
 		while(isLetter() || isDigit()){
 			catToken();
-			getChar();
+			if(!getChar())
+				break;
 		}
 		retract();
 		
@@ -201,7 +200,8 @@ int getsysm()
 	{	
 		while(isDigit()){
 			catToken();
-			getChar();
+			if(!getChar())
+				break;
 		}
 
 		retract();
@@ -230,6 +230,7 @@ int getsysm()
 	else if (isRpar())	{ symbol = RPARSY;}		// 	判断 )
 	else{
 		error();
+		symbol = UNKOWNSY;
 		return UNKOWNSY;
 	}
 
@@ -273,7 +274,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
-	if(symbol==0){
+	if(!infile.eof()){
 		cout<<"Unknown";
 	}
 
