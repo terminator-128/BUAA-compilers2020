@@ -1,5 +1,5 @@
 FROM gcc:10
-WORKDIR /app/
+WORKDIR /
 COPY ./* ./
 RUN g++ cxylex.cpp -o program
 RUN chmod +x program
