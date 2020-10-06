@@ -258,26 +258,26 @@ int main(int argc, char const *argv[])
 
 	while(!infile.eof()&&getsysm()){
 		switch(symbol){
-			case  1: cout<<"Begin";break;
-			case  2: cout<<"End";break;
-			case  3: cout<<"For";break;
-			case  4: cout<<"If";break;
-			case  5: cout<<"Then";break;
-			case  6: cout<<"Else";break;
-			case  7: cout<<"Ident("<<identity<<")";break;
-			case  8: cout<<"Int("<<num<<")";break;
-			case  9: cout<<"Colon";break;
-			case 10: cout<<"Plus";break;
-			case 11: cout<<"Star";break;
-			case 12: cout<<"Comma";break;
-			case 13: cout<<"LParenthesis";break;
-			case 14: cout<<"RParenthesis";break;
-			case 15: cout<<"Assign";break;
+			case  1: cout<<"Begin\n";break;
+			case  2: cout<<"End\n";break;
+			case  3: cout<<"For\n";break;
+			case  4: cout<<"If\n";break;
+			case  5: cout<<"Then\n";break;
+			case  6: cout<<"Else\n";break;
+			case  7: cout<<"Ident("<<identity<<")\n";break;
+			case  8: cout<<"Int("<<num<<")\n";break;
+			case  9: cout<<"Colon\n";break;
+			case 10: cout<<"Plus\n";break;
+			case 11: cout<<"Star\n";break;
+			case 12: cout<<"Comma\n";break;
+			case 13: cout<<"LParenthesis\n";break;
+			case 14: cout<<"RParenthesis\n";break;
+			case 15: cout<<"Assign\n";break;
 		}
 	}
 
 	if(!infile.eof()){
-		cout<<"Unknown";
+		cout<<"Unknown\n";
 	}
 
 	infile.close();
