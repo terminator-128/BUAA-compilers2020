@@ -1,4 +1,5 @@
 # 这是一个简单的Dockerfile配置文件
+FROM ubuntu:16.04
 FROM gcc:10
 WORKDIR /app/
 COPY ./* ./
