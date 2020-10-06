@@ -189,7 +189,9 @@ int getsysm()
 			if(!getChar())
 				break;
 		}
-		retract();
+
+		if(!infile.eof())
+			retract();
 		
 		// string token_str;
 		// cout <<token_str.assign(token.begin(),token.end());
@@ -203,8 +205,8 @@ int getsysm()
 			if(!getChar())
 				break;
 		}
-
-		retract();
+		if(!infile.eof())
+			retract();
 
 		num = transNum();
 
